@@ -1,0 +1,126 @@
+.v1{
+    
+    width: 20vw;
+    height: 120vh;
+    /* border: 1px solid red; */
+    padding-left: 30px;
+    /* color:black; */
+    /* display: flex; */
+}
+#forv1{
+    width: 25vw;
+    height: 120vh;
+    /*border: 1px solid black;*/
+    display: flex;
+    background: #222831;
+    font-size: 15px;
+}
+#v0{
+    width: 100%;
+    height: 5vh;
+    /* border: 1px solid black; */
+    /* border-width:3px; */
+    color:white;
+    font-size: larger;
+    padding-left: 20px;
+    padding-bottom: 80px;
+    background:#171717;
+
+
+
+}
+.v2{
+    margin-left: 50px;
+}
+#text1{
+    font-size:x-large;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+
+
+}
+#tx{
+    color:white;
+}
+#revandtime{
+    display: flex;
+    color: white;
+
+}
+#revandtime1 {
+    color: #999;
+    text-align: left;
+}
+ #video{
+   /* border: 1px solid black;*/
+    width: 90vw;
+    height: 80vh;
+    /* display: flex; */
+    /* margin-bottom: 80px; */
+    /* margin-right: 40%; */
+    background: #171717;
+}
+.video1{
+    height: 35vh;
+    background: #31363F;
+}
+#Main{
+    /* border: 1px solid black; */
+    width: 100%;
+    height:120vh;
+    display: flex;
+    background: #31363F;
+
+}
+body{
+    background: #171717;
+}
+#footer {
+            width: 100%;
+            padding: 20px;
+            background: #171717;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border-top: 1px solid black;
+        }
+
+        .footer-section {
+            width: 200px;
+            margin: 10px;
+        }
+
+        .footer-section h2 {
+            font-size: larger;
+            font-weight: bold;
+            font-family: sans-serif;
+            margin-bottom: 10px;
+            color: #ffe100;
+        }
+
+        .footer-section a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            margin: 5px 0;
+        }.footer-section a:hover{
+            color: #DC6B19;
+        }
+        .connect{
+            padding: 5px;
+    border-radius: 90px;
+    border: 1px solid #ccc;
+
+        }
+        .connect .fa-brands {
+
+            margin-right: 10px;
+          
+        }
+       .btn-primary {
+            
+            margin-left: 10px;
+            margin-right: 10px;
+            
+        }

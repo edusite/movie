@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movies</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="video.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+</head>
+<body>
+    <section>
+
+        <nav>
+            
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Cine<span>Verse</span></h1>
+                </a>
+                
+            </div>
+
+            <div class="right">
+                
+                <ul>
+                    <li><a href="index.html" id="home-link">Home</a></li>
+                    <li><a href="movies.html" id="movies-link"> Movies</a></li>
+                    <li><a href="series.html" id="series-link">TV Series</a></li>
+                    <!-- <li><a href="#">Cartoons</a></li> -->
+                    <li><a href="contact.html" id="contact-link">Contact</a></li>
+                </ul>
+
+            </div>
+            <div class="search">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+        </nav>
+        <div class="title1">
+             Home  .  Movies
+        </div>
+        <br>
+         <!-- 1 -->
+         <div class="dropdown-container">
+             
+         
+        <div class="dropdown">
+            <span class="dropdown-label">Type:</span>
+            <button class="btn btn-secondary dropdown-toggle custom-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="selectedType">Movies</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" onclick="selectItem('Type', 'Movies')">Movies</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('Type', 'TV Series')">TV Series</a></li>
+            </ul>
+        </div>
+            <!-- 2 -->
+        <div class="dropdown">
+            <span class="dropdown-label">Genre:</span>
+            <button class="btn btn-secondary dropdown-toggle custom-btn" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="selectedgenre">All</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" onclick="selectItem('genre', 'All')">All</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('genre', 'Action')">Action</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('genre', 'Adventure')">Adventure</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('genre', 'Animation')">Animation</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('genre', 'Comedy')">Comedy</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('genre', 'Fantasy')">Fantasy</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('genre', 'Horror')">Horror</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('genre', 'Sci-fi')">Sci-fi</a></li>
+            </ul>
+        </div>
+            <!-- 3 -->
+            <div class="dropdown">
+            <span class="dropdown-label">Quality:</span>
+            <button class="btn btn-secondary dropdown-toggle custom-btn" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="selectedquality">All</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" onclick="selectItem('quality', 'All')">All</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('quality', 'HD')">HD</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('quality', 'SD')">SD</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('quality', 'CAM')">CAM</a></li>
+
+            </ul>
+        </div>
+            <!-- 4 -->
+            <div class="dropdown">
+            <span class="dropdown-label">Year</span>
+            <button class="btn btn-secondary dropdown-toggle custom-btn" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="selectedyear">All</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" onclick="selectItem('year', 'All')">All</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('year', '2024')">2024</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('year', '2023')">2023</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('year', '2022')">2022</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('year', '2021')">2021</a></li>
+            </ul>
+        </div>
+            <!-- 5
+             -->
+            <div class="dropdown">
+            <span class="dropdown-label">Sort:</span>
+            <button class="btn btn-secondary dropdown-toggle custom-btn" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="selectedsort">Last Update</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" onclick="selectItem('sort', 'Last Update')"><i class="fa-regular fa-clock"></i> Last Update</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('sort', 'IMDb')"><i class="fa-solid fa-chart-area"></i> IMDb</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectItem('sort', 'Name A-Z')"><i class="fa-solid fa-arrow-down-a-z"></i> Name A-Z</a></li>
+            </ul>
+        </div>
+        
+        <button class="btn btn-primary custom-btn search2" type="button">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <br><br>
+
+
+        <div class="second">
+        <div class="latest">
+            
+
+            <div class="box">
+                <div class="card">
+                    <div class="details">
+                        <div class="left">
+                            <p class="name">Elemental</p>
+                            <div class="data_quality">
+                                <p class="quality">HD</p>
+                                <p class="data">2023</p>
+                            </div>
+                            <p class="category">Family/Romance</p>
+                            <div class="info">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>7</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>109min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <a href="elemental.html"><i class="fa-solid fa-play"></i></a>
+                        </div>
+                    </div>
+                    <img src="movie/image10.jpg">
+                </div>
+                <div class="card">
+                    <div class="details">
+                        <div class="left">
+                            <p class="name">John Wick</p>
+                            <div class="data_quality">
+                                <p class="quality">HD</p>
+                                <p class="data">2023</p>
+                            </div>
+                            <p class="category">Action/Thriller</p>
+                            <div class="info">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>7.7</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>169min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <img src="movie/55.jpeg">
+                </div>
+                <div class="card">
+                    <div class="details">
+                        <div class="left">
+                            <p class="name">Jujutsu Kaisen 0</p>
+                            <div class="data_quality">
+                                <p class="quality">4K</p>
+                                <p class="data">2021</p>
+                            </div>
+                            <p class="category">Action/Fantasy</p>
+                            <div class="info">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>7.8</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>105min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <img src="movie/41.jpg">
+                </div>
+                <div class="card">
+                    <div class="details">
+                        <div class="left">
+                            <p class="name">Avenger:Age of Ultron</p>
+                            <div class="data_quality">
+                                <p class="quality">HD</p>
+                                <p class="data">2015</p>
+                            </div>
+                            <p class="category">Sci-fic/Action</p>
+                            <div class="info">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>7.3</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>141min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <img src="movie/28.jpg">
+                </div>
+                <div class="card">
+                    <div class="details">
+                        <div class="left">
+                            <p class="name">Black Panther</p>
+                            <div class="data_quality">
+                                <p class="quality">HD</p>
+                                <p class="data">2018</p>
+                            </div>
+                            <p class="category">Sci-fi/Action</p>
+                            <div class="info">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>7.3</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>135min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <img src="movie/51.jpeg">
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <!-- ---------------------------- -->
+            <div class="box">
+                <div class="card">
+                    <div class="details">
+                        <div class="left">
+                            <p class="name">Aquaman</p>
+                            <div class="data_quality">
+                                <p class="quality">HD</p>
+                                <p class="data">2018</p>
+                            </div>
+                            <p class="category">Action/Fantasy</p>
+                            <div class="info">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>6.8</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>143min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <img src="movie/52.jpeg">
+                </div>
+                <div class="card">
+                    <div class="details">
+                        <div class="left">
+                            <p class="name">Avengers</p>
+                            <div class="data_quality">
+                                <p class="quality">4K</p>
+                                <p class="data">2012</p>
+                            </div>
+                            <p class="category">Action/Sci-fi</p>
+                            <div class="info">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>9.2</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>117min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <img src="movie/32.jpg">
+                </div>
+                <div class="card">
+                    <div class="details">
+                        <div class="left">
+                            <p class="name">Transformers:Rise of the beast</p>
+                            <div class="data_quality">
+                                <p class="quality">HD</p>
+                                <p class="data">2023</p>
+                            </div>
+                            <p class="category">Action/Sci-fi</p>
+                            <div class="info">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>7</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>144min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <img src="movie/56.jpeg">
+                </div>
+                <div class="card">
+                    <div class="details">
+                        <div class="left">
+                            <p class="name">Ant Man:Quantumania</p>
+                            <div class="data_quality">
+                                <p class="quality">HD</p>
+                                <p class="data">2023</p>
+                            </div>
+                            <p class="category">Action/Adventure</p>
+                            <div class="info">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>9.2</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>110min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <img src="movie/60.jpeg">
+                </div>
+                <div class="card">
+                    <div class="details">
+                        <div class="left">
+                            <p class="name">Spiderman:No Way Home</p>
+                            <div class="data_quality">
+                                <p class="quality">4K</p>
+                                <p class="data">2024</p>
+                            </div>
+                            <p class="category">Sci-fi/Action</p>
+                            <div class="info">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>9.2</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>117min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <img src="movie/47.jpg">
+                </div>
+
+            
+
+
+
+
+
+
+
+
+            </div>
+            <!-- ---------------------------- -->
+            
+        </div>
+        <br>
+        <div class="next">
+            <div class="btn1">Page 1 of 1</div>
+            <div class="btn1">1</div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="footer-section">
+        <h2>About Us</h2>
+        <a href="#" class="about">Terms of Service</a>
+        <a href="#" class="about">Contact Us</a>
+        <a href="#" class="about">Sitemap</a>
+    </div>
+    <div class="footer-section">
+        <h2>Sections</h2>
+        <a href="#">Movie</a>
+        <a href="#">TV Series</a>
+        <a href="#">IMDB Rate</a>
+    </div> 
+    <div class="footer-section">
+        <h2>Genre</h2>
+        <a href="#" class="about">🗂️ Action</a>
+        <a href="#" class="about">🗂️ Comedy</a>
+        <a href="#" class="about">🗂️ Drama</a>
+        <a href="#" class="about">🗂️ Fantasy</a>
+        <a href="#" class="about">🗂️ Horror</a>
+        <a href="#" class="about">🗂️ Mystery</a>
+    </div>
+    <div class="footer-section">
+        <h2>Connect With Us</h2>
+        <div class="connect">
+            <a href="#"><i class="fa-brands fa-telegram"></i>Join Group Telegram</a>
+        </div>
+        <div class="connect">
+            <a href="#"><i class="fa-brands fa-reddit"></i>Join Group Reddit</a>
+        </div>
+        <div class="connect"> 
+            <a href="#"><i class="fa-brands fa-twitter"></i>Join Group Twitter</a>
+        </div>
+    </div>
+    <p>&copy; 2024 CineVerse.</p>
+</footer>
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script src="movies.js">
+    
+
+
+
+
+
+
+
+    
+  </script>
+
+</body>
+</html>
